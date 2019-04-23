@@ -99,9 +99,26 @@ function tableExists($table){
 
 
 
+function join_evaluaciones_subact(){
+  global $db;
 
+  $sql =  " SELECT e.subact_id, e.nota, e.alumno_id, s.actividad_id as actividad_id ";
+  $sql .= " FROM evaluaciones e ";
+  $sql .= " LEFT JOIN subact s ON s.id = e.subact_id ";
 
+  return find_by_sql($sql);
+}
 
+function get_notas_by_alumno_actividad($alumno, $actividad) {
+  global $db;
+
+  $sql =  " SELECT nota";
+  $sql .= " FROM evaluaciones e ";
+  $sql .= " LEFT JOIN subact s ON s.id = e.subact_id ";
+  $sql .= " WHERE alumno_id='{$alumno}' AND s.actividad_id='{$actividad}' ";
+
+  return find_by_sql($sql);
+}
 
 /*---------------//-----------------BORRAR DE AQUI PARA ABAJO--------------//---------------------------*/
 

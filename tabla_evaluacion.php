@@ -13,7 +13,6 @@
 
   global $db;
   if (isset($_POST['evaluar'])) {
-    var_dump($_POST['nota']);
     $notas = $_POST['nota'];
     foreach ($subacts as $subact) {
       foreach ($alumnos as $alumno) {
@@ -35,7 +34,7 @@
 ?>
 
 
-
+<a href="index.php">ATRÁS</a>
 
 <div class="">
   <table class="table">
