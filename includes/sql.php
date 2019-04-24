@@ -109,6 +109,7 @@ function join_evaluaciones_subact(){
   return find_by_sql($sql);
 }
 
+
 function get_notas_by_alumno_actividad($alumno, $actividad) {
   global $db;
 
@@ -119,6 +120,17 @@ function get_notas_by_alumno_actividad($alumno, $actividad) {
 
   return find_by_sql($sql);
 }
+
+
+function get_tipo_inteligencia_by_actividad_id($actividad_id){
+  global $db;
+
+  $sql =  " SELECT tipo_inteligencia_id FROM actividades WHERE id='{$actividad_id}'";
+
+  return find_by_sql($sql);
+}
+
+
 
 /*---------------//-----------------BORRAR DE AQUI PARA ABAJO--------------//---------------------------*/
 
