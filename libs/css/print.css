@@ -1,0 +1,32 @@
+
+@page {
+  size: A4 portrait;
+}
+
+
+body{
+  font-family: 'Arial', sans-serif;
+}
+
+div.informe{
+  background-color: white;
+}
+
+div.informe h1{
+  text-align: center;
+}
+
+div.graficos{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div.grafica-ind{
+  width: 25%;
+  text-align: center;
+}
+
+div.grafica-ind h3{
+  text-align: center;
+}

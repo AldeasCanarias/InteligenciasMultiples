@@ -1,13 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| OWSA-INV V2
-|--------------------------------------------------------------------------
-| Author: Siamon Hasan
-| Project Name: OSWA-INV
-| Version: v2
-| Offcial page: http://oswapp.com/
-| facebook Page: https://www.facebook.com/oswapp
+
 |
 |
 |
