@@ -7,7 +7,7 @@
            echo remove_junk($page_title);
             elseif(!empty($user))
            echo ucfirst($user['name']);
-            else echo "Gestor de Solicitudes";?>
+            else echo "Inteligencias Multiples";?>
     </title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,22 +21,22 @@
     <script src="js/bootstrap-datetimepicker.min.js"></script>
   </head>
   <body class="bg-secondary">
-  <?php  if ($session->isUserLoggedIn(true)): ?>
+  <?php  //if ($session->isUserLoggedIn(true)): ?>
     <header class="bg-dark" id="header">
-      <a href="home.php"> <div class="logo float-left bg-dark text-light font-weight-bold pl-5"><i class="fas fa-file-signature mr-2"></i> GESTOR DE SOLICITUDES</div></a>
+      <a href="index.php"> <div class="logo float-left bg-dark text-light font-weight-bold pl-5"> Inteligencias Múltiples</div></a>
 <!--  <div class="botones d-flex flex-display-row justify-content-around">
         <a href="solicitudes.php" class="boton-top">Todas las solicitudes</a>
         <a href="select_categoria_solicitud.php" class="boton-top">Nueva Solicitud</a>
         <a href="validate_solicitudes.php" class="boton-top">Validar o Aprobar</a>
       </div>       -->
 
-      <div class="header-content">
+    <!--  <div class="header-content">
       <div class="float-right clearfix">
         <ul class="info-menu list-inline list-unstyled">
           <li class="profile">
             <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
               <img src="libs/images/user_image.png" alt="user-image" class="img-circle img-inline">
-              <span><?php echo remove_junk(ucfirst($user['user'])); ?> <i class="caret"></i></span>
+              <span><?php //echo remove_junk(ucfirst($user['user'])); ?> <i class="caret"></i></span>
             </a>
             <ul class="dropdown-menu">
              <li>
@@ -55,10 +55,10 @@
           </li>
         </ul>
       </div>
-     </div>
+     </div> -->
     </header>
 
-<?php endif;?>
+<?php //endif;?>
 
 <div class="page">
   <div class="container-fluid">
