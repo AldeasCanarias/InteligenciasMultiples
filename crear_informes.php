@@ -94,27 +94,27 @@
 
     <?php foreach ($alumnos as $alumno): ?>
       <div class="informe">
-        <h1>Informe sobre los talentos observados</h1>
+        <header>
+          <img src="img/logo-aldeas.jpg" alt="logo-aldeas">
+        </header>
+        <h1>Informe sobre los Talentos Observados</h1>
 
         <p>
-          El siguiente informe muestra la valoración de los talentos de la niña o el niño durante el Campamento de Inteligencias Múltiples celebrado por Aldeas Infantiles SOS entre el 25 y el 29 de junio de 2018.
+          El siguiente informe muestra la valoración de los talentos de la niña o el niño durante el Campamento de Inteligencias Múltiples celebrado por Aldeas Infantiles SOS entre el 24 y el 28 de junio de 2019.
 
-          La información que aquí se aporta se ha obtenido a través de una metodología observacional y con el uso de hojas de registro, tras la participación de la niña o niño en 16 talleres diferentes durante la semana en la que se desarrolló en campamento.
+          La información que aquí se aporta se ha obtenido a través de una metodología observacional y con el uso de hojas de registro, tras la participación de la niña o niño en <?php echo count($actividades) ?> talleres diferentes durante la semana en la que se desarrolló en campamento.
 
           Los talentos evaluados parten de la adaptación de la Teoría de las Inteligencias Múltiples de H. Gardner, donde nuestra agrupación de talentos a observar queda de la siguiente manera: Científico (lógico-matemático), Naturalista, Artístico y Corporal (espacial), Musical, Existencial (espiritual), Emocional (intrapersonal e interpersonal), y Lingüístico. Como apéndice a este informe se encuentra el desarrollo del significado de cada talento para facilitar su interpretación.</p>
 
-        <h2><?php echo $alumno['nombre'] ?> </h2>
-        <h2>Resultados: </h2>
+        <h2 class="nombre"><?php echo $alumno['nombre'] ?> </h2>
+        <h2 class="resultados">Resultados: </h2>
+
+        <p>Talentos observados y valoración en una escala del 1 al 3, donde “1” indica talento poco observado (a reforzar durante el próximo curso) y “3” indica talento muy observado (a seguir fomentando durante el próximo curso)</p>
 
         <div class="graficos">
           <?php foreach ($tipos_inteligencia as $t_int): ?>
             <div class="grafica-ind">
-              <h3><?php
-                    echo $t_int['nombre'];
-                    echo ":  ";
-                    echo $suma_inteligencias[$alumno['id']][$t_int['id']];
-                  ?>
-              </h3>
+
               <?php $chart = new GoogChart();
                     $data = array(' ' => $suma_inteligencias[$alumno['id']][$t_int['id']], '' => 3 - $suma_inteligencias[$alumno['id']][$t_int['id']]);
                     if ($suma_inteligencias[$alumno['id']][$t_int['id']] <= 1) {
@@ -133,12 +133,18 @@
                     	'type' => 'pie',
                     	'title' => '',
                     	'data' => $data,
-                    	'size' => array( 400, 300 ),
+                    	'size' => array( 120, 170 ),
                     	'color' => $color
                     	));
                     // Print chart
                     echo $chart;
               ?>
+              <h3><?php
+                    echo $t_int['nombre'];
+                    echo ":  ";
+                    echo $suma_inteligencias[$alumno['id']][$t_int['id']];
+                  ?>
+              </h3>
             </div>
           <?php endforeach; ?>
         </div>

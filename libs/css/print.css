@@ -1,32 +1,103 @@
 
 @page {
   size: A4 portrait;
+  margin:10%;
+  margin-top:5%;
+}
+
+@media print {
+  body{
+    font-family: 'Arial', sans-serif;
+  }
+
+  div.informe{
+    background-color: white;
+    page-break-after: always;
+  }
+
+  div.informe header img{
+    height: 15%;
+    width: 20%;
+  }
+
+  div.informe h1{
+    text-align: center;
+  }
+
+  div.informe h2{
+    text-align: center;
+  }
+
+  div.informe h2.resultados{
+    font-size: 1.2rem;
+  }
+
+  div.informe p{
+    text-align: justify;
+  }
+
+  div.graficos{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  div.grafica-ind{
+    width: 25%;
+    text-align: center;
+  }
+
+  div.grafica-ind h3{
+    text-align: center;
+  }
 }
 
 
-body{
-  font-family: 'Arial', sans-serif;
-}
+@media screen{
+  body{
+    font-family: 'Arial', sans-serif;
+  }
 
-div.informe{
-  background-color: white;
-}
+  div.informe{
+    background-color: white;
+    page-break-after: always;
+  }
 
-div.informe h1{
-  text-align: center;
-}
+  div.informe header img{
+    height: 15%;
+    width: 20%;
+  }
 
-div.graficos{
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+  div.informe h1{
+    text-align: center;
+  }
 
-div.grafica-ind{
-  width: 25%;
-  text-align: center;
-}
+  div.informe h2{
+    text-align: center;
+  }
 
-div.grafica-ind h3{
-  text-align: center;
+  div.informe h2.resultados{
+    font-size: 1.2rem;
+  }
+
+  div.informe p{
+    text-align: justify;
+  }
+
+  div.graficos{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  div.grafica-ind{
+    width: 25%;
+    text-align: center;
+  }
+
+  div.grafica-ind h3{
+    text-align: center;
+  }
 }
