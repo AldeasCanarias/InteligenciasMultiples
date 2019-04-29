@@ -132,6 +132,29 @@ function get_tipo_inteligencia_by_actividad_id($actividad_id){
 
 
 
+function get_inteligencia_id_by_nombre($nombre){
+  global $db;
+
+  $sql = "SELECT id FROM tipos_inteligencia WHERE nombre='{$nombre}'";
+
+  return find_by_sql($sql);
+}
+
+
+
+function subacts_by_nombre_inteligencia($nombre_int){
+    global $db;
+    $inteligencia_id = get_inteligencia_id_by_nombre($nombre_int)[0];
+
+    $sql = " SELECT s.descripcion, act.tipo_inteligencia_id ";
+    $sql .=" FROM subact s ";
+    $sql .=" LEFT JOIN actividades act ON act.id = s.actividad_id ";
+    $sql .=" WHERE act.tipo_inteligencia_id = '{$inteligencia_id['id']}' ";
+
+    return find_by_sql($sql);
+}
+
+
 /*---------------//-----------------BORRAR DE AQUI PARA ABAJO--------------//---------------------------*/
 
 

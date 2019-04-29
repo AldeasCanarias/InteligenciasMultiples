@@ -93,8 +93,9 @@
     ?>
 
     <?php foreach ($alumnos as $alumno): ?>
+      <!--PAGINA UNO-->
       <div class="informe">
-        <header>
+        <header id="pageHeader">
           <img src="img/logo-aldeas.jpg" alt="logo-aldeas">
         </header>
         <h1>Informe sobre los Talentos Observados</h1>
@@ -149,6 +150,127 @@
           <?php endforeach; ?>
         </div>
     </div>
+
+    <!--PAGINA DOS+-->
+    <div class="informe">
+
+      <h1>Descripción de los Talentos</h1>
+
+      <div class="descripcion-int">
+        <h3>Corporal</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Corporal'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+      <div class="descripcion-int">
+        <h3>Lógico-Matemática</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Lógico-Matemática'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+      <div class="descripcion-int">
+        <h3>Artística</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Artística'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+      <div class="descripcion-int">
+        <h3>Naturalista</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Naturalista'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+      <div class="descripcion-int">
+        <h3>Musical</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Musical'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+      <div class="descripcion-int">
+        <h3>Lingüística</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Lingüística'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+      <div class="descripcion-int">
+        <h3>Existencial</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Existencial'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+      <div class="descripcion-int">
+        <h3>Emocional</h3>
+        <p>DESCRIPCIÓN</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Emocional'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+    </div>
+
+
     <?php endforeach; ?>
   </body>
 </html>

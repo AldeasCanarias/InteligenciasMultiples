@@ -1,23 +1,34 @@
-
-@page {
+@page{
   size: A4 portrait;
   margin:10%;
-  margin-top:5%;
+  margin-top:8%;
 }
+
+
 
 @media print {
+
   body{
     font-family: 'Arial', sans-serif;
   }
 
+
   div.informe{
+    margin-top: 70px;
     background-color: white;
     page-break-after: always;
   }
 
+  div.informe p{
+    font-size: 15px;
+  }
+
   div.informe header img{
-    height: 15%;
-    width: 20%;
+    height: 60px;
+    position:fixed;
+    top:0px;
+    left:0px;
+
   }
 
   div.informe h1{
@@ -50,23 +61,38 @@
 
   div.grafica-ind h3{
     text-align: center;
+  }
+
+  div.descripcion-int{
+    margin-bottom: 5%;
+    page-break-inside: avoid;
+    page-break-after: auto;
   }
 }
 
+@media screen {
 
-@media screen{
   body{
     font-family: 'Arial', sans-serif;
   }
 
+
   div.informe{
+    margin-top: 70px;
     background-color: white;
     page-break-after: always;
   }
 
+  div.informe p{
+    font-size: 15px;
+  }
+
   div.informe header img{
-    height: 15%;
-    width: 20%;
+    height: 60px;
+    position:fixed;
+    top:0px;
+    left:0px;
+
   }
 
   div.informe h1{
@@ -99,5 +125,11 @@
 
   div.grafica-ind h3{
     text-align: center;
+  }
+
+  div.descripcion-int{
+    margin-bottom: 5%;
+    page-break-inside: avoid;
+    page-break-after: auto;
   }
 }
