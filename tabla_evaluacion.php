@@ -34,7 +34,7 @@
 ?>
 
 
-<a href="index.php">ATRÁS</a>
+<a href="elegir_equipo.php">ATRÁS</a>
 
 <div class="">
   <table class="table">

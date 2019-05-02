@@ -4,34 +4,18 @@
 ?>
 <?php include_once('layouts/header.php'); ?>
 
-<?php
-  $all_equipos = find_all('equipos');
-  $all_actividades = find_all('actividades');
-?>
 
+<div class="menu">
+  <ul>
+    <li> <a href="elegir_equipo.php">EVALUAR GRUPOS</a> </li>
+    <li> <a href="crear_informes.php">CREAR INFORMES FINALES</a> </li>
+    <br>
 
-<div class="selector_filtros">
-  <form class="" action="tabla_evaluacion.php" method="post">
-    <select class="equipo" name="equipo">
-      <?php foreach ($all_equipos as $equipo): ?>
-        <option value="<?php echo $equipo['id'] ?>"> <?php echo $equipo['nombre'] ?> </option>
-      <?php endforeach; ?>
-    </select>
-
-    <select class="actividad" name="actividad">
-      <?php foreach ($all_actividades as $actividad): ?>
-        <option value="<?php echo $actividad['id'] ?>"> <?php echo $actividad['nombre'] ?> </option>
-      <?php endforeach; ?>
-    </select>
-
-    <button class="btn-success" type="submit" name="button">Evaluar Grupo</button>
-  </form>
+    <li> <a href="crud_alumnos.php">GESTIONAR ALUMNOS</a> </li>
+    <li> <a href="crud_actividades.php">GESTIONAR ACTIVIDADES Y CRITERIOS DE EVALUACIÓN</a> </li>
+    <li> <a href="actualizar_fechas.php">CAMBIAR FECHA DEL EVENTO</a> </li>
+    <li> <a href="#">RESETEAR BASE DE DATOS (Alumnos, Actividades y Evaluaciones)</a> </li>
+  </ul>
 </div>
-
-
-
-
-
-
 
 <?php include_once('layouts/footer.php'); ?>

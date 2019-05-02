@@ -312,7 +312,9 @@ input[type=file]{
 
 
 /*CUSTOM CSS*/
-
+div.menu ul li a {
+  color:white;
+}
 
 
 

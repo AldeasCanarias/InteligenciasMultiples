@@ -28,7 +28,6 @@
     position:fixed;
     top:0px;
     left:0px;
-
   }
 
   div.informe h1{
@@ -64,9 +63,18 @@
   }
 
   div.descripcion-int{
-    margin-bottom: 5%;
     page-break-inside: avoid;
     page-break-after: auto;
+    padding-top:50px;
+  }
+  div.descripcion-int-first{
+    page-break-inside: avoid;
+    page-break-after: auto;
+    padding-top:0px;
+  }
+
+  button.imprimir{
+    display:none;
   }
 }
 
@@ -90,7 +98,7 @@
   div.informe header img{
     height: 60px;
     position:fixed;
-    top:0px;
+    top:20px;
     left:0px;
 
   }
@@ -131,5 +139,9 @@
     margin-bottom: 5%;
     page-break-inside: avoid;
     page-break-after: auto;
+  }
+
+  button.imprimir{
+    margin-left: 90%;
   }
 }

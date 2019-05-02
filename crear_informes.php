@@ -18,6 +18,8 @@
       $alumnos = find_all('alumnos');
       $actividades = find_all('actividades');
       $tipos_inteligencia = find_all('tipos_inteligencia');
+      $fecha_inicio = new DateTime(find_by_id('fecha_evento', 1)['fecha_inicio']);
+      $fecha_fin = new DateTime(find_by_id('fecha_evento', 1)['fecha_fin']);
     ?>
 
     <?php
@@ -92,6 +94,8 @@
       }
     ?>
 
+    <button type="submit" name="imprimir" value="" class="btn-success imprimir" onclick="window.print();">Imprimir Informes</button>
+
     <?php foreach ($alumnos as $alumno): ?>
       <!--PAGINA UNO-->
       <div class="informe">
@@ -101,7 +105,7 @@
         <h1>Informe sobre los Talentos Observados</h1>
 
         <p>
-          El siguiente informe muestra la valoración de los talentos de la niña o el niño durante el Campamento de Inteligencias Múltiples celebrado por Aldeas Infantiles SOS entre el 24 y el 28 de junio de 2019.
+          El siguiente informe muestra la valoración de los talentos de la niña o el niño durante el Campamento de Inteligencias Múltiples celebrado por Aldeas Infantiles SOS entre el <?php echo $fecha_inicio->format('d-m-Y'); ?> y el <?php echo $fecha_fin->format('d-m-Y'); ?>.
 
           La información que aquí se aporta se ha obtenido a través de una metodología observacional y con el uso de hojas de registro, tras la participación de la niña o niño en <?php echo count($actividades) ?> talleres diferentes durante la semana en la que se desarrolló en campamento.
 
@@ -156,7 +160,7 @@
 
       <h1>Descripción de los Talentos</h1>
 
-      <div class="descripcion-int">
+      <div class="description-int-first">
         <h3>Corporal</h3>
         <p>DESCRIPCIÓN</p>
         <p>
@@ -172,7 +176,7 @@
 
       <div class="descripcion-int">
         <h3>Lógico-Matemática</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>La capacidad de entender las relaciones abstractas, de llevar a cabo operaciones matemáticas y de realizar investigaciones de una manera científica.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Lógico-Matemática'); ?>
@@ -200,7 +204,7 @@
 
       <div class="descripcion-int">
         <h3>Naturalista</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>es la capacidad de tener un amplio conocimiento del mundo de los seres vivos. Es aquella persona que una gran capacidad para establecer y justificar distinciones basadas en la visión normal o en dispositivos para aumentar el tamaño de las imágenes o incluso en el empleo de medios no visuales. Reconocer especies, clasificarlas. Es una persona especialista en reconocer y clasificar numerosas especies flora y fauna- de su entorno.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Naturalista'); ?>
@@ -214,7 +218,7 @@
 
       <div class="descripcion-int">
         <h3>Musical</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>Capacidad de percibir y reproducir la música.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Musical'); ?>
@@ -228,7 +232,7 @@
 
       <div class="descripcion-int">
         <h3>Lingüística</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>la capacidad de entender y utilizar el propio idioma. Supone una sensibilidad especial hacia el lenguaje hablado y escrito, la capacidad de aprender idiomas y de emplear el lenguaje para lograr determinados objetivos.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Lingüística'); ?>
@@ -256,7 +260,7 @@
 
       <div class="descripcion-int">
         <h3>Emocional</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>capacidad de entenderse, motivarse y controlarse a uno mismo. Es la capacidad de comprenderse a uno mismo, de tener un modelo útil y eficaz de uno mismo (que incluye deseos, miedos y capacidades) y de emplear esta información con eficacia en la regulación de la propia vida. Tiene un papel esencial en las decisiones que una persona toma a lo largo de su vida. Al ser la inteligencia más privada requiere de lenguaje, la música u otras formas expresivas para poder ser observada en funcionamiento.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Emocional'); ?>
