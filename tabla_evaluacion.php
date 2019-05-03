@@ -32,9 +32,7 @@
   }
 
 ?>
-
-
-<a href="elegir_equipo.php">ATRÁS</a>
+<a href="elegir_equipo.php" class="text-light mb-5"><i class="fas fa-chevron-left"></i> ATRÁS</a>
 
 <div class="">
   <table class="table">
@@ -59,7 +57,7 @@
       <?php endforeach; ?>
       <input type="hidden" name="equipo" value="<?php echo $equipo_id ?>">
       <input type="hidden" name="actividad" value="<?php echo $actividad_id ?>">
-      <button type="submit" class="button-success" name="evaluar">Evaluar</button>
+      <button type="submit" class="btn-success mb-3 float-right" name="evaluar">EVALUAR</button>
       </form>
 
     </tbody>

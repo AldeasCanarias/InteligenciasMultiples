@@ -23,7 +23,7 @@
     ?>
 
     <?php
-      $media_alumno_actividad; //Hacer matriz
+      $media_alumno_actividad; 
 
       foreach ($alumnos as $alumno) {
         foreach ($actividades as $actividad) {

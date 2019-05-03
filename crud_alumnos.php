@@ -63,7 +63,7 @@
         <tr>
           <td><?php echo $alumno['nombre']; ?></td>
           <td><?php echo $equipo[0]['nombre'] ?></td>
-          <td> <a href="crud_alumnos.php?borrar=1&id=<?php echo $alumno['id']; ?>">BORRAR</a> </td>
+          <td> <a href="crud_alumnos.php?borrar=1&id=<?php echo $alumno['id']; ?>" class="text-danger bold">BORRAR</a> </td>
         </tr>
       <?php endforeach; ?>
     </tbody>
