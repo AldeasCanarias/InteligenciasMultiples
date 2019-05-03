@@ -23,7 +23,7 @@
     ?>
 
     <?php
-      $media_alumno_actividad; 
+      $media_alumno_actividad;
 
       foreach ($alumnos as $alumno) {
         foreach ($actividades as $actividad) {
@@ -190,7 +190,7 @@
 
       <div class="descripcion-int">
         <h3>Artística</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>Capacidad de desarrollar diferentes disciplinas artísticas como el dibujo o la pintura.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Artística'); ?>
@@ -204,7 +204,7 @@
 
       <div class="descripcion-int">
         <h3>Naturalista</h3>
-        <p>es la capacidad de tener un amplio conocimiento del mundo de los seres vivos. Es aquella persona que una gran capacidad para establecer y justificar distinciones basadas en la visión normal o en dispositivos para aumentar el tamaño de las imágenes o incluso en el empleo de medios no visuales. Reconocer especies, clasificarlas. Es una persona especialista en reconocer y clasificar numerosas especies flora y fauna- de su entorno.</p>
+        <p>Es la capacidad de tener un amplio conocimiento del mundo de los seres vivos. Es aquella persona que una gran capacidad para establecer y justificar distinciones basadas en la visión normal o en dispositivos para aumentar el tamaño de las imágenes o incluso en el empleo de medios no visuales. Reconocer especies, clasificarlas. Es una persona especialista en reconocer y clasificar numerosas especies flora y fauna- de su entorno.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Naturalista'); ?>
@@ -232,7 +232,7 @@
 
       <div class="descripcion-int">
         <h3>Lingüística</h3>
-        <p>la capacidad de entender y utilizar el propio idioma. Supone una sensibilidad especial hacia el lenguaje hablado y escrito, la capacidad de aprender idiomas y de emplear el lenguaje para lograr determinados objetivos.</p>
+        <p>La capacidad de entender y utilizar el propio idioma. Supone una sensibilidad especial hacia el lenguaje hablado y escrito, la capacidad de aprender idiomas y de emplear el lenguaje para lograr determinados objetivos.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Lingüística'); ?>
@@ -246,7 +246,7 @@
 
       <div class="descripcion-int">
         <h3>Existencial</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>Es el talento con el que afrontamos y resolvemos problemas de significados y valores, el talento con el que podemos poner nuestros actos y nuestras vidas en un contexto más amplio, más rico y más significativo. El talento con el que podemos determinar que un curso de acción o camino vital es más valioso que otro. Nos da capacidad para discriminar, nos transmite nuestro sentido moral, para soñar, anhelar y levantarnos tras los golpes de la vida.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Existencial'); ?>
@@ -260,7 +260,7 @@
 
       <div class="descripcion-int">
         <h3>Emocional</h3>
-        <p>capacidad de entenderse, motivarse y controlarse a uno mismo. Es la capacidad de comprenderse a uno mismo, de tener un modelo útil y eficaz de uno mismo (que incluye deseos, miedos y capacidades) y de emplear esta información con eficacia en la regulación de la propia vida. Tiene un papel esencial en las decisiones que una persona toma a lo largo de su vida. Al ser la inteligencia más privada requiere de lenguaje, la música u otras formas expresivas para poder ser observada en funcionamiento.</p>
+        <p>Capacidad de entenderse, motivarse y controlarse a uno mismo. Es la capacidad de comprenderse a uno mismo, de tener un modelo útil y eficaz de uno mismo (que incluye deseos, miedos y capacidades) y de emplear esta información con eficacia en la regulación de la propia vida. Tiene un papel esencial en las decisiones que una persona toma a lo largo de su vida. Al ser la inteligencia más privada requiere de lenguaje, la música u otras formas expresivas para poder ser observada en funcionamiento.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Emocional'); ?>
