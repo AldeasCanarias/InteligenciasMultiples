@@ -162,7 +162,7 @@
 
       <div class="description-int-first">
         <h3>Corporal</h3>
-        <p>DESCRIPCIÓN</p>
+        <p>Capacidad de percibir y reproducir el movimiento. Supone la capacidad de emplear partes del propio cuerpo (como la mano o la boca) o su totalidad para resolver problemas o crear productos.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
           <?php $subacts = subacts_by_nombre_inteligencia('Corporal'); ?>
