@@ -155,6 +155,25 @@ function subacts_by_nombre_inteligencia($nombre_int){
 }
 
 
+
+function find_alumnos_by_equipo($equipo){
+  global $db;
+
+  $sql = " SELECT * FROM alumnos WHERE equipo_id = '{$equipo}'";
+
+  return find_by_sql($sql);
+}
+
+
+
+function find_subact_by_actividad($actividad){
+  global $db;
+
+  $sql = " SELECT * FROM subact WHERE actividad_id = '{$actividad}'";
+
+  return find_by_sql($sql);
+}
+
 /*---------------//-----------------BORRAR DE AQUI PARA ABAJO--------------//---------------------------*/
 
 

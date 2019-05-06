@@ -1,0 +1,57 @@
+@page{
+  size: A4 landscape;
+  margin:10%;
+  margin-top:5%;
+}
+
+
+
+@media print {
+
+  body{
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+  }
+
+  div.ficha-eval{
+    page-break-inside: avoid;
+    page-break-after: always;
+  }
+
+
+  table {
+     table-layout:
+     fixed; width:100%;
+   }
+
+  button.imprimir{
+    display:none;
+  }
+
+}
+
+@media screen {
+
+  body{
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+  }
+
+  div.ficha-eval{
+    page-break-inside: avoid;
+    page-break-after: always;
+  }
+
+
+  table {
+     table-layout:
+     fixed; width:100%;
+   }
+
+
+  button.imprimir{
+    font-size: 1rem;
+    margin-left: 90%;
+  }
+  
+}

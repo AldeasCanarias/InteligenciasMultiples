@@ -9,6 +9,7 @@
   <ul>
     <li> <a href="elegir_equipo.php">EVALUAR GRUPOS</a> </li>
     <li> <a href="crear_informes.php">CREAR INFORMES FINALES</a> </li>
+    <li> <a href="evaluacion_papel.php">CREAR FICHAS EVALUACION (Papel)</a> </li>
     <br>
 
     <li> <a href="crud_alumnos.php">GESTIONAR ALUMNOS</a> </li>
