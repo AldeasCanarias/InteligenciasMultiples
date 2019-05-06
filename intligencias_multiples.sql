@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-05-2019 a las 14:36:28
+-- Tiempo de generación: 06-05-2019 a las 19:45:12
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -41,8 +41,7 @@ CREATE TABLE `actividades` (
 INSERT INTO `actividades` (`id`, `nombre`, `tipo_inteligencia_id`) VALUES
 (1, 'Actividad Uno', 3),
 (2, 'Actividad Dos', 3),
-(3, 'Actividad Tres', 5),
-(6, 'Actividad Cuatro', 1);
+(3, 'Actividad Tres', 5);
 
 -- --------------------------------------------------------
 
@@ -61,12 +60,21 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id`, `nombre`, `equipo_id`) VALUES
-(1, 'Carlos Hernández Pérez', 3),
 (2, 'Yara Hernández Pérez', 3),
 (3, 'Alberto Hernández Pérez', 4),
 (4, 'Andrea Hernández Pérez', 7),
 (5, 'Virginia Hernández Pérez', 7),
-(6, 'Santiago Hernández Pérez', 7);
+(6, 'Santiago Hernández Pérez', 7),
+(7, 'Pepito de Los Palotes', 7),
+(8, 'Un Tio', 7),
+(9, 'Wolololo Walalalala', 7),
+(10, 'EOOO EEEEEEO', 7),
+(11, 'Francisco Francisco', 7),
+(12, 'Mohamed Mohamad', 7),
+(13, 'Chen Chun', 7),
+(14, 'Takeshi Honda', 7),
+(15, 'Superman de Kripton', 7),
+(17, 'Batman Wayne', 7);
 
 -- --------------------------------------------------------
 
@@ -126,15 +134,10 @@ INSERT INTO `evaluaciones` (`id`, `nota`, `subact_id`, `alumno_id`) VALUES
 (83, 1, 8, 4),
 (84, 2, 8, 5),
 (85, 3, 8, 6),
-(86, 2, 1, 1),
 (87, 2, 1, 2),
-(88, 2, 3, 1),
 (89, 2, 3, 2),
-(90, 2, 5, 1),
 (91, 2, 5, 2),
-(92, 1, 6, 1),
 (93, 1, 6, 2),
-(94, 1, 8, 1),
 (95, 1, 8, 2),
 (96, 1, 2, 4),
 (97, 2, 2, 5),
@@ -142,24 +145,15 @@ INSERT INTO `evaluaciones` (`id`, `nota`, `subact_id`, `alumno_id`) VALUES
 (99, 1, 4, 4),
 (100, 2, 4, 5),
 (101, 3, 4, 6),
-(102, 1, 7, 4),
-(103, 2, 7, 5),
-(104, 3, 7, 6),
 (105, 1, 9, 4),
 (106, 2, 9, 5),
 (107, 2, 9, 6),
 (108, 3, 10, 4),
 (109, 2, 10, 5),
 (110, 1, 10, 6),
-(111, 3, 2, 1),
 (112, 3, 2, 2),
-(113, 2, 4, 1),
 (114, 3, 4, 2),
-(115, 1, 7, 1),
-(116, 3, 7, 2),
-(117, 0, 9, 1),
 (118, 3, 9, 2),
-(119, 1, 10, 1),
 (120, 2, 10, 2),
 (121, 1, 1, 3),
 (122, 2, 3, 3),
@@ -168,7 +162,6 @@ INSERT INTO `evaluaciones` (`id`, `nota`, `subact_id`, `alumno_id`) VALUES
 (125, 1, 8, 3),
 (126, 2, 2, 3),
 (127, 3, 4, 3),
-(128, 1, 7, 3),
 (129, 2, 9, 3),
 (130, 3, 10, 3);
 
@@ -214,10 +207,10 @@ INSERT INTO `subact` (`id`, `descripcion`, `actividad_id`) VALUES
 (4, 'sdgsagsadg', 2),
 (5, 'sssssssss', 1),
 (6, 'sdgadsg', 1),
-(7, 'asd', 2),
 (8, 'sdag', 1),
 (9, 'sdadgasdgasdg', 3),
-(10, 'asdgsddddddddd', 3);
+(10, 'asdgsddddddddd', 3),
+(12, 'JAhs ApsoJ AS Aŝk`Okasàksàksàks iuad adoaa daosdhasod badabs doa s ao dashd ah da da hda dhap sdha sdasd', 1);
 
 -- --------------------------------------------------------
 
@@ -309,7 +302,7 @@ ALTER TABLE `actividades`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `equipos`
@@ -333,7 +326,7 @@ ALTER TABLE `fecha_evento`
 -- AUTO_INCREMENT de la tabla `subact`
 --
 ALTER TABLE `subact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tipos_inteligencia`
@@ -361,8 +354,8 @@ ALTER TABLE `alumnos`
 -- Filtros para la tabla `evaluaciones`
 --
 ALTER TABLE `evaluaciones`
-  ADD CONSTRAINT `FK_Alumno` FOREIGN KEY (`alumno_id`) REFERENCES `alumnos` (`id`),
-  ADD CONSTRAINT `FK_Subact` FOREIGN KEY (`subact_id`) REFERENCES `subact` (`id`);
+  ADD CONSTRAINT `FK_Alumno` FOREIGN KEY (`alumno_id`) REFERENCES `alumnos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_Subact` FOREIGN KEY (`subact_id`) REFERENCES `subact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `subact`
