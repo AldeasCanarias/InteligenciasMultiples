@@ -30,7 +30,7 @@
           <h2> <?php echo $equipo["nombre"]; ?></h2>
           <table class="table table-sm table-bordered mb-5 text-center">
             <thead>
-                <th></th>
+              <th style="width:300px"> </th>
               <?php foreach ($alumnos as $alumno): ?>
                 <th><?php echo $alumno["nombre"] ?></th>
               <?php endforeach; ?>
@@ -39,7 +39,7 @@
               <?php $subacts = find_subact_by_actividad($actividad['id']) ?>
               <?php foreach ($subacts as $subact): ?>
                 <tr>
-                  <td ><?php echo $subact['descripcion'] ?></td>
+                  <td><?php echo $subact['descripcion'] ?></td>
                   <?php foreach ($alumnos as $alumno): ?>
                     <td></td>
                   <?php endforeach; ?>
