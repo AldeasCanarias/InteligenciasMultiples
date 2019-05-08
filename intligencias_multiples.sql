@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-05-2019 a las 19:45:12
+-- Tiempo de generación: 08-05-2019 a las 10:47:19
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -119,9 +119,6 @@ CREATE TABLE `evaluaciones` (
 --
 
 INSERT INTO `evaluaciones` (`id`, `nota`, `subact_id`, `alumno_id`) VALUES
-(71, 1, 1, 4),
-(72, 2, 1, 5),
-(73, 3, 1, 6),
 (74, 1, 3, 4),
 (75, 2, 3, 5),
 (76, 3, 3, 6),
@@ -134,7 +131,6 @@ INSERT INTO `evaluaciones` (`id`, `nota`, `subact_id`, `alumno_id`) VALUES
 (83, 1, 8, 4),
 (84, 2, 8, 5),
 (85, 3, 8, 6),
-(87, 2, 1, 2),
 (89, 2, 3, 2),
 (91, 2, 5, 2),
 (93, 1, 6, 2),
@@ -155,7 +151,6 @@ INSERT INTO `evaluaciones` (`id`, `nota`, `subact_id`, `alumno_id`) VALUES
 (114, 3, 4, 2),
 (118, 3, 9, 2),
 (120, 2, 10, 2),
-(121, 1, 1, 3),
 (122, 2, 3, 3),
 (123, 3, 5, 3),
 (124, 1, 6, 3),
@@ -201,7 +196,6 @@ CREATE TABLE `subact` (
 --
 
 INSERT INTO `subact` (`id`, `descripcion`, `actividad_id`) VALUES
-(1, 'asasdgasgsadg', 1),
 (2, 'sadgsdggs', 2),
 (3, 'asdgsdggdg', 1),
 (4, 'sdgsagsadg', 2),
@@ -296,7 +290,7 @@ ALTER TABLE `tipos_inteligencia`
 -- AUTO_INCREMENT de la tabla `actividades`
 --
 ALTER TABLE `actividades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `alumnos`
@@ -326,7 +320,7 @@ ALTER TABLE `fecha_evento`
 -- AUTO_INCREMENT de la tabla `subact`
 --
 ALTER TABLE `subact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `tipos_inteligencia`
@@ -361,7 +355,7 @@ ALTER TABLE `evaluaciones`
 -- Filtros para la tabla `subact`
 --
 ALTER TABLE `subact`
-  ADD CONSTRAINT `FK_Actividad` FOREIGN KEY (`actividad_id`) REFERENCES `actividades` (`id`);
+  ADD CONSTRAINT `FK_Actividad` FOREIGN KEY (`actividad_id`) REFERENCES `actividades` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
