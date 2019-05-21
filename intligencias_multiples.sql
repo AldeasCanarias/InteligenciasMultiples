@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-05-2019 a las 10:47:19
+-- Tiempo de generación: 21-05-2019 a las 12:41:30
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -34,15 +34,6 @@ CREATE TABLE `actividades` (
   `tipo_inteligencia_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `actividades`
---
-
-INSERT INTO `actividades` (`id`, `nombre`, `tipo_inteligencia_id`) VALUES
-(1, 'Actividad Uno', 3),
-(2, 'Actividad Dos', 3),
-(3, 'Actividad Tres', 5);
-
 -- --------------------------------------------------------
 
 --
@@ -54,27 +45,6 @@ CREATE TABLE `alumnos` (
   `nombre` varchar(100) NOT NULL,
   `equipo_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `alumnos`
---
-
-INSERT INTO `alumnos` (`id`, `nombre`, `equipo_id`) VALUES
-(2, 'Yara Hernández Pérez', 3),
-(3, 'Alberto Hernández Pérez', 4),
-(4, 'Andrea Hernández Pérez', 7),
-(5, 'Virginia Hernández Pérez', 7),
-(6, 'Santiago Hernández Pérez', 7),
-(7, 'Pepito de Los Palotes', 7),
-(8, 'Un Tio', 7),
-(9, 'Wolololo Walalalala', 7),
-(10, 'EOOO EEEEEEO', 7),
-(11, 'Francisco Francisco', 7),
-(12, 'Mohamed Mohamad', 7),
-(13, 'Chen Chun', 7),
-(14, 'Takeshi Honda', 7),
-(15, 'Superman de Kripton', 7),
-(17, 'Batman Wayne', 7);
 
 -- --------------------------------------------------------
 
@@ -114,52 +84,6 @@ CREATE TABLE `evaluaciones` (
   `alumno_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `evaluaciones`
---
-
-INSERT INTO `evaluaciones` (`id`, `nota`, `subact_id`, `alumno_id`) VALUES
-(74, 1, 3, 4),
-(75, 2, 3, 5),
-(76, 3, 3, 6),
-(77, 1, 5, 4),
-(78, 2, 5, 5),
-(79, 3, 5, 6),
-(80, 1, 6, 4),
-(81, 2, 6, 5),
-(82, 3, 6, 6),
-(83, 1, 8, 4),
-(84, 2, 8, 5),
-(85, 3, 8, 6),
-(89, 2, 3, 2),
-(91, 2, 5, 2),
-(93, 1, 6, 2),
-(95, 1, 8, 2),
-(96, 1, 2, 4),
-(97, 2, 2, 5),
-(98, 3, 2, 6),
-(99, 1, 4, 4),
-(100, 2, 4, 5),
-(101, 3, 4, 6),
-(105, 1, 9, 4),
-(106, 2, 9, 5),
-(107, 2, 9, 6),
-(108, 3, 10, 4),
-(109, 2, 10, 5),
-(110, 1, 10, 6),
-(112, 3, 2, 2),
-(114, 3, 4, 2),
-(118, 3, 9, 2),
-(120, 2, 10, 2),
-(122, 2, 3, 3),
-(123, 3, 5, 3),
-(124, 1, 6, 3),
-(125, 1, 8, 3),
-(126, 2, 2, 3),
-(127, 3, 4, 3),
-(129, 2, 9, 3),
-(130, 3, 10, 3);
-
 -- --------------------------------------------------------
 
 --
@@ -190,21 +114,6 @@ CREATE TABLE `subact` (
   `descripcion` varchar(250) NOT NULL,
   `actividad_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `subact`
---
-
-INSERT INTO `subact` (`id`, `descripcion`, `actividad_id`) VALUES
-(2, 'sadgsdggs', 2),
-(3, 'asdgsdggdg', 1),
-(4, 'sdgsagsadg', 2),
-(5, 'sssssssss', 1),
-(6, 'sdgadsg', 1),
-(8, 'sdag', 1),
-(9, 'sdadgasdgasdg', 3),
-(10, 'asdgsddddddddd', 3),
-(12, 'JAhs ApsoJ AS Aŝk`Okasàksàksàks iuad adoaa daosdhasod badabs doa s ao dashd ah da da hda dhap sdha sdasd', 1);
 
 -- --------------------------------------------------------
 
@@ -290,7 +199,7 @@ ALTER TABLE `tipos_inteligencia`
 -- AUTO_INCREMENT de la tabla `actividades`
 --
 ALTER TABLE `actividades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `alumnos`
@@ -320,7 +229,7 @@ ALTER TABLE `fecha_evento`
 -- AUTO_INCREMENT de la tabla `subact`
 --
 ALTER TABLE `subact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tipos_inteligencia`
