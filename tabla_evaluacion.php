@@ -35,7 +35,7 @@
 <a href="elegir_equipo.php" class="text-light mb-5"><i class="fas fa-chevron-left"></i> ATRÁS</a>
 
 <div class="">
-  <table class="table text-center">
+  <table class="table text-center table-borderless table-striped">
     <thead>
       <th></th>
       <?php foreach ($alumnos as $alumno): ?>
