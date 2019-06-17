@@ -146,7 +146,7 @@ function subacts_by_nombre_inteligencia($nombre_int){
     global $db;
     $inteligencia_id = get_inteligencia_id_by_nombre($nombre_int)[0];
 
-    $sql = " SELECT s.descripcion, act.tipo_inteligencia_id ";
+    $sql = " SELECT DISTINCT s.descripcion, act.tipo_inteligencia_id ";
     $sql .=" FROM subact s ";
     $sql .=" LEFT JOIN actividades act ON act.id = s.actividad_id ";
     $sql .=" WHERE act.tipo_inteligencia_id = '{$inteligencia_id['id']}' ";
