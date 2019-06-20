@@ -160,12 +160,12 @@
 
       <h1>Descripción de los Talentos</h1>
 
-      <div class="description-int-first">
-        <h3>Corporal</h3>
-        <p>Capacidad de percibir y reproducir el movimiento. Supone la capacidad de emplear partes del propio cuerpo (como la mano o la boca) o su totalidad para resolver problemas o crear productos.</p>
+      <div class="descripcion-int">
+        <h3>Artística</h3>
+        <p>Capacidad de desarrollar diferentes disciplinas artísticas como el dibujo o la pintura.</p>
         <p>
           <b>Aspectos tomados en cuenta:</b>
-          <?php $subacts = subacts_by_nombre_inteligencia('Corporal'); ?>
+          <?php $subacts = subacts_by_nombre_inteligencia('Artística'); ?>
           <ul>
             <?php foreach ($subacts as $sub): ?>
               <li><?php echo $sub['descripcion']; ?></li>
@@ -189,20 +189,6 @@
       </div>
 
       <div class="descripcion-int">
-        <h3>Artística</h3>
-        <p>Capacidad de desarrollar diferentes disciplinas artísticas como el dibujo o la pintura.</p>
-        <p>
-          <b>Aspectos tomados en cuenta:</b>
-          <?php $subacts = subacts_by_nombre_inteligencia('Artística'); ?>
-          <ul>
-            <?php foreach ($subacts as $sub): ?>
-              <li><?php echo $sub['descripcion']; ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </p>
-      </div>
-
-      <div class="descripcion-int">
         <h3>Naturalista</h3>
         <p>Es la capacidad de tener un amplio conocimiento del mundo de los seres vivos. Es aquella persona que una gran capacidad para establecer y justificar distinciones basadas en la visión normal o en dispositivos para aumentar el tamaño de las imágenes o incluso en el empleo de medios no visuales. Reconocer especies, clasificarlas. Es una persona especialista en reconocer y clasificar numerosas especies flora y fauna- de su entorno.</p>
         <p>
@@ -216,7 +202,21 @@
         </p>
       </div>
 
-      <div class="descripcion-int">
+      <div class="description-int-first">
+        <h3>Corporal</h3>
+        <p>Capacidad de percibir y reproducir el movimiento. Supone la capacidad de emplear partes del propio cuerpo (como la mano o la boca) o su totalidad para resolver problemas o crear productos.</p>
+        <p>
+          <b>Aspectos tomados en cuenta:</b>
+          <?php $subacts = subacts_by_nombre_inteligencia('Corporal'); ?>
+          <ul>
+            <?php foreach ($subacts as $sub): ?>
+              <li><?php echo $sub['descripcion']; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </p>
+      </div>
+
+<!--      <div class="descripcion-int">
         <h3>Musical</h3>
         <p>Capacidad de percibir y reproducir la música.</p>
         <p>
@@ -228,7 +228,7 @@
             <?php endforeach; ?>
           </ul>
         </p>
-      </div>
+      </div> -->
 
       <div class="descripcion-int">
         <h3>Lingüística</h3>

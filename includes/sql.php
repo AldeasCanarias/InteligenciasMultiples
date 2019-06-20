@@ -116,7 +116,7 @@ function get_notas_by_alumno_actividad($alumno, $actividad) {
   $sql =  " SELECT nota";
   $sql .= " FROM evaluaciones e ";
   $sql .= " LEFT JOIN subact s ON s.id = e.subact_id ";
-  $sql .= " WHERE alumno_id='{$alumno}' AND s.actividad_id='{$actividad}' ";
+  $sql .= " WHERE alumno_id='{$alumno}' AND s.actividad_id='{$actividad}' AND nota > 0";
 
   return find_by_sql($sql);
 }
